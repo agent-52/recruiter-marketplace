@@ -19,10 +19,13 @@ import {COLORS, icons, images, SIZES, FONT} from "../../constants"
     const [secureEntery, setSecureEntery] = useState(true);
   
     const handleGoBack = () => {
-        router.push(`/login/home`)
+        router.push(`/`)
     };
     const handleSignup = () => {
         router.push(`/login/signup`)
+    };
+    const handleLogin = () => {
+        router.push(`/screens/mainScreen`)
     };
   
     return (
@@ -77,7 +80,7 @@ import {COLORS, icons, images, SIZES, FONT} from "../../constants"
           <TouchableOpacity>
             <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.loginButtonWrapper}>
+          <TouchableOpacity style={styles.loginButtonWrapper} onPress={handleLogin}>
             <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
           <Text style={styles.continueText}>or continue with</Text>

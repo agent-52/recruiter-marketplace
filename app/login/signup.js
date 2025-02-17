@@ -21,7 +21,7 @@ import {COLORS, icons, images, SIZES, FONT} from "../../constants"
     const [secureEntery, setSecureEntery] = useState(true);
   
     const handleGoBack = () => {
-        router.push(`/login/home`)
+        router.push(`/`)
     };
     const handleSignUp = () =>{
         router.push(`/screens/mainScreen`)
