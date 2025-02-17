@@ -90,7 +90,7 @@ const JobSearch = () => {
                     <>
                         <View style={styles.container}>
                             <Text style={styles.searchTitle}>{params.id}</Text>
-                            <Text style={styles.noOfSearchedJobs}>Candidates</Text>
+                            <Text style={styles.noOfSearchedJobs}>profiles</Text>
                         </View>
                         <View style={styles.loaderContainer}>
                             {searchLoader ? (

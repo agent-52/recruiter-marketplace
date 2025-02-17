@@ -36,7 +36,7 @@ import {COLORS, icons, images, SIZES, FONT} from "../../constants"
                             options={{
                                 headerStyle:{backgroundColor: COLORS.lightWhite},
                                 headerShadowVisible: false,
-                                
+                                headerShown: false,
                                 headerTitle: ""
                             }}/>
       <View style={styles.container}>
