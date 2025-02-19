@@ -11,6 +11,7 @@
  const Home =() =>{
     const router = useRouter()
     const [searchTerm, setSearchTerm] = useState("")
+    const [isOn, setIsOn] = useState(false);
     return(
         <SafeAreaView style={{flex:1, backgroundColor: COLORS.lightWhite}}>
             <Stack.Screen
@@ -44,13 +45,16 @@
                     />
                     <View style={{marginTop: 20}}>
                     <ToggleSwitch
-                    isOn={false}
+                    isOn={isOn}
                     onColor="green"
                     offColor="rgb(255, 119, 84)"
                     label="Recruiters"
                     labelStyle={{ color: "black", fontWeight: "500" }}
                     size="small"
-                    onToggle={isOn => console.log("changed to : ", isOn)}
+                    onToggle={isOn => {console.log("changed to : ", isOn)
+                    setIsOn(isOn)
+                    }
+                    }
                     
                     />
                     </View>
