@@ -6,6 +6,8 @@
 
  import {Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome} from "../../components"
 
+ import ToggleSwitch from 'toggle-switch-react-native'
+
  const Home =() =>{
     const router = useRouter()
     const [searchTerm, setSearchTerm] = useState("")
@@ -40,6 +42,18 @@
                             }
                         }}
                     />
+                    <View style={{marginTop: 20}}>
+                    <ToggleSwitch
+                    isOn={false}
+                    onColor="green"
+                    offColor="rgb(255, 119, 84)"
+                    label="Recruiters"
+                    labelStyle={{ color: "black", fontWeight: "500" }}
+                    size="small"
+                    onToggle={isOn => console.log("changed to : ", isOn)}
+                    
+                    />
+                    </View>
                     <Popularjobs />
                     <Nearbyjobs />
 
